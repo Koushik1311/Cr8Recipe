@@ -5,7 +5,10 @@ export default function Register() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-3">
       <div className="min-h-[100vh] sm:col-start-2 flex flex-col justify-center items-center gap-[0.7rem]">
-        <Link className="absolute top-[2.5rem] right-[3rem]" href="/login">
+        <Link
+          className="absolute top-[2.5rem] right-[3rem] text-sm"
+          href="/login"
+        >
           Login
         </Link>
         {/* TODO: Logo */}

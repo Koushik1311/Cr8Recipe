@@ -15,14 +15,16 @@ export const onLogin = async (
   // Define GraphQL mutation with variables
   const graphqlMutation = {
     query: `
-        mutation login($input: LoginUserInput!) {
-            login(loginUserInput: $input) {
-                user {
-                    email
-                }
-                access_token
-            }
+    mutation login($input: LoginUserInput!) {
+      login(loginUserInput: $input) {
+        user {
+          id
+          email
         }
+        access_token
+        refresh_token
+      }
+    }
       `,
     variables: {
       input: {
@@ -44,10 +46,11 @@ export const onLogin = async (
     // Check the response from the server
     const responseData = response.data.data.login;
     if (responseData) {
-      const { user, access_token } = responseData;
+      const { user, access_token, refresh_token } = responseData;
 
       // Save the access token in localStorage
       localStorage.setItem("access_token", access_token);
+      localStorage.setItem("refresh_token", refresh_token);
 
       // Redirect to the home page or do any other post-login actions
       router.push("/");

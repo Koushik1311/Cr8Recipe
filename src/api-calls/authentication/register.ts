@@ -14,12 +14,11 @@ export const onRegister = async (
   // Define GraphQL mutation with variables
   const graphqlMutation = {
     query: `
-        mutation signup($input: LoginUserInput!) {
-          signup(loginUserInput: $input) {
-            id
-            email
-          }
-        }
+    mutation signup($input: SignupUserInput!) {
+      signup(signupUserInput:$input) {
+        message
+      }
+    }
       `,
     variables: {
       input: {

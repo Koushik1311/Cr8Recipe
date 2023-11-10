@@ -1,13 +1,34 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Btn from "../Shared/Btn";
 import { navLinks } from "@/data/navbar/data";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
+import useLoginContext from "@/hooks/LoginContext";
+import { onLogout } from "@/api-calls/authentication/logout";
 
 export default function NavBar() {
-  const isLoggedIn = () => {
-    const token = localStorage.getItem("access_token");
-    return token ? true : false;
+  const { isLoggedIn, setIsLoggedIn } = useLoginContext();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    onLogout(router, setIsLoggedIn);
   };
+
+  useEffect(() => {
+    // Check if the JWT token exists in local storage on component mount
+    const token = Cookies.get("access_token");
+
+    // Update the login status based on the token's presence
+    if (token) {
+      setIsLoggedIn(true); // User is logged in if the token exists
+    } else {
+      setIsLoggedIn(false); // User is not logged in if the token doesn't exist
+    }
+  }, []);
+
   return (
     <section className="mt-[1rem] flex items-center justify-between">
       {/* Logo */}
@@ -23,16 +44,10 @@ export default function NavBar() {
 
       {/* Login/Register */}
       <>
-        {isLoggedIn() ? (
-          <button
-            onClick={() => {
-              localStorage.removeItem("access_token");
-              localStorage.removeItem("refresh_token");
-            }}
-          >
-            Log Out
-          </button>
+        {isLoggedIn ? ( // If the user is logged in
+          <button onClick={handleLogout}>Log Out</button>
         ) : (
+          // If the user is not logged in
           <Btn goTo="/login">Log In</Btn>
         )}
       </>

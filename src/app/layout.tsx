@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import LoginContextProvider from "../contexts/LoginContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-50`}>
-        {children}
+      <body className={`${inter.className} bg-slate-50 container mx-auto`}>
+        <LoginContextProvider>{children}</LoginContextProvider>
         <Toaster
           position="top-center"
           toastOptions={{

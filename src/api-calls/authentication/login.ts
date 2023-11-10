@@ -1,6 +1,8 @@
 import axios from "axios";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import toast from "react-hot-toast";
+import Cookies from "js-cookie";
+import { encryptToken } from "@/utils/TokenEncription";
 
 export const onLogin = async (
   user: { email: string; password: string },
@@ -45,12 +47,20 @@ export const onLogin = async (
 
     // Check the response from the server
     const responseData = response.data.data.login;
+    console.log(responseData);
     if (responseData) {
       const { user, access_token, refresh_token } = responseData;
 
-      // Save the access token in localStorage
-      localStorage.setItem("access_token", access_token);
-      localStorage.setItem("refresh_token", refresh_token);
+      // Encrypt the tokens before storing them in respective storages
+      const encryptedAccessToken = encryptToken(access_token);
+      const encryptedRefreshToken = encryptToken(refresh_token);
+      const encryptedUserId = encryptToken(user.id);
+
+      Cookies.set("access_token", encryptedAccessToken, {
+        expires: 1,
+      }); // Set an expiry for the cookie
+      Cookies.set("refresh_token", encryptedRefreshToken, { expires: 28 }); // Set an expiry for the cookie
+      Cookies.set("user_id", encryptedUserId, { expires: 28 });
 
       // Redirect to the home page or do any other post-login actions
       router.push("/");

@@ -47,7 +47,6 @@ export const onLogin = async (
 
     // Check the response from the server
     const responseData = response.data.data.login;
-    console.log(responseData);
     if (responseData) {
       const { user, access_token, refresh_token } = responseData;
 

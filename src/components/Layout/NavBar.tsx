@@ -45,7 +45,12 @@ export default function NavBar() {
       {/* Login/Register */}
       <>
         {isLoggedIn ? ( // If the user is logged in
-          <button onClick={handleLogout}>Log Out</button>
+          <div>
+            <Link className="mr-4" href="/write/recipe">
+              Write
+            </Link>
+            <button onClick={handleLogout}>Log Out</button>
+          </div>
         ) : (
           // If the user is not logged in
           <Btn goTo="/login">Log In</Btn>

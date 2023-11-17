@@ -5,58 +5,63 @@
 ## Getting Started
 
 1. Fork the Repository:
+
    - Click on the "Fork" button at the top right of this page.
    - Clone the forked repository to your local machine.
 
-```bash
-git clone https://github.com/<your-username>/cr8recipe.git
-cd cr8recipe
-```
+   ```bash
+   git clone https://github.com/<your-username>/cr8recipe.git
+   cd cr8recipe
+   ```
 
 2. Install dependencies:
 
-```bash
-yarn
-# or
-yarn install
-```
+   ```bash
+   yarn
+   # or
+   yarn install
+   ```
 
 3. Create a branch:
+
    - Create a new branch for your contribution:
 
-```bash
-git checkout -b feature/new-feture
-# or
-git checkout -b fix/bug-name
-```
+   ```bash
+   git checkout -b feature/new-feture
+   # or
+   git checkout -b fix/bug-name
+   ```
 
 4. Make changes:
 
    - Work on your contribution. Ensure your changes follow the project's codding style and convention.
 
 5. Test your changes:
+
    - Run the development server:
 
-```bash
-yarn dev
-```
+   ```bash
+   yarn dev
+   ```
 
-    - open localhost:3000 and verify that your changes work as expected.
+   - open localhost:3000 and verify that your changes work as expected.
 
 6. Commit your changes:
+
    - Commit your changes with a descriptive commit message:
 
-```bash
-git add .
-git commit -m "Add new feture or fix issue"
-```
+   ```bash
+   git add .
+   git commit -m "Add new feture or fix issue"
+   ```
 
 7. Push Changes:
+
    - Push your changes to your forked repository:
 
-```bash
-git push origin feture/new-feture
-```
+   ```bash
+   git push origin feture/new-feture
+   ```
 
 8. Create a Pull Request (PR):
    - Go to the original repository and click on "Compare & pull request."

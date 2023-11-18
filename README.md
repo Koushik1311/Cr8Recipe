@@ -80,6 +80,10 @@ Cr8Recipe is a modern recipe-sharing application that combines innovative techno
    - Provide a clear title and description for your PR.
    - Submit the PR for review.
 
+### Important:
+
+**If you are working on an existing issue, comment on the issue to express your interest in working on it. The first person to comment will be assigned to the task. Only assigned tasks will be accepted as PRs. If you're working on a new issue, mention your intention to work on it before creating a PR.**
+
 ## Setting Up the Backend
 
 Cr8Recipe relies on the backend API available at [Cr8Recipe-API](https://github.com/Koushik1311/Cr8Recipe-API.git). Follow the README.md file to set up the backend.

@@ -10,102 +10,45 @@ Cr8Recipe is a modern recipe-sharing application that combines innovative techno
 - GraphQL
 - Axios
 
-# Cr8Recipe - Contribution Gide
+## Contributing
 
-👋 Thank you for considering contributing to Cr8Recipe! We welcome your ideas, bug reports, suggestions, and code contributions.
+We welcome and appreciate contributions from the community to make Cr8Recipe even better! If you're interested in contributing, please follow the guidelines below:
 
-## Getting Started
+### How to Contribute
 
-1. **Fork the Repository:**
-
-   - Click on the "Fork" button at the top right of this page.
-   - Clone the forked repository to your local machine.
+1. Fork the repository to your GitHub account.
+2. Clone the forked repository to your local machine.
 
    ```bash
-   git clone https://github.com/<your-username>/cr8recipe.git
-   cd cr8recipe
+   git clone https://github.com/your-username/Cr8Recipe.git
    ```
 
-2. **Install dependencies:**
+3. Create a new branch for your changes.
 
    ```bash
-   yarn
-   # or
-   yarn install
+      git checkout -b feture/your-feture-name
    ```
 
-3. **Create a branch:**
-
-   - Create a new branch for your contribution:
+4. Make your changes and commit them with clear, descriptive messages.
 
    ```bash
-   git checkout -b feature/new-feture
-   # or
-   git checkout -b fix/bug-name
+   git commit -m "Add your concise commit message here"
    ```
 
-4. **Make changes:**
-
-   - Work on your contribution. Ensure your changes follow the project's codding style and convention.
-
-5. **Test your changes:**
-
-   - Run the development server:
+5. Push your changes to your GitHub repository.
 
    ```bash
-   yarn dev
+   git push origin feature/your-feature-name
    ```
 
-   - open localhost:3000 and verify that your changes work as expected.
-
-6. **Commit your changes:**
-
-   - Commit your changes with a descriptive commit message:
-
-   ```bash
-   git add .
-   git commit -m "Add new feture or fix issue"
-   ```
-
-7. **Push Changes:**
-
-   - Push your changes to your forked repository:
-
-   ```bash
-   git push origin feture/new-feture
-   ```
-
-8. **Create a Pull Request (PR):**
-   - Go to the original repository and click on "Compare & pull request."
-   - Provide a clear title and description for your PR.
-   - Submit the PR for review.
-
-### Important:
-
-**If you are working on an existing issue, comment on the issue to express your interest in working on it. The first person to comment will be assigned to the task. Only assigned tasks will be accepted as PRs. If you're working on a new issue, mention your intention to work on it before creating a PR.**
-
-## Setting Up the Backend
-
-Cr8Recipe relies on the backend API available at [Cr8Recipe-API](https://github.com/Koushik1311/Cr8Recipe-API.git). Follow the README.md file to set up the backend.
+6. Open a pull request on the original repository.
 
 ## Code Style
 
-- Follow the coding style used in the project.
-- If you're unsure, check the existing code for examples.
+Please follow the established code style and guidelines in the project. If you're unsure, refer to the [CONTRIBUTION.md](CONTRIBUTION.md) file for detailed information.
 
-## Issues and Bug Reports
+## Issues
 
-- If you find a bug, open an issue with a detailed description.
-- Include information about your environment(OS, Node.js version, etc.).
+Before working on new features or fixes, check the [issue tracker](https://github.com/Koushik1311/Cr8Recipe/issues) for any existing issues or discussions. If you don't find one related to your contribution, feel free to create a new issue and discuss it with the community.
 
-## Feature Requests
-
-- Feel free to open an issue to propos a new feature.
-- Discuss the feature with the maintainers before starting work.
-
-## Community Guidelines
-
-- Be respectful and inclusive.
-- Provide constructive feedback.
-
-Let's make Cr8Recipe awesome together! 🚀👩‍💻👨‍💻 #OpenSource #ContributeNow
+Thank you for contributing to Cr8Recipe! 🌮🍲

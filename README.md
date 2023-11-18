@@ -1,10 +1,22 @@
+# Cr8Recipe
+
+Cr8Recipe is a modern recipe-sharing application that combines innovative technology with a user-friendly interface, empowering users to create, share, and explore culinary delights. Whether you're a seasoned chef or a kitchen enthusiast, Cr8Recipe is your go-to platform for discovering and sharing delicious recipes.
+
+## Technologies User
+
+- Node.js 20.9.0 lts
+- Next.js 14
+- Tailwind CSS
+- GraphQL
+- Axios
+
 # Cr8Recipe - Contribution Gide
 
 👋 Thank you for considering contributing to Cr8Recipe! We welcome your ideas, bug reports, suggestions, and code contributions.
 
 ## Getting Started
 
-1. Fork the Repository:
+1. **Fork the Repository:**
 
    - Click on the "Fork" button at the top right of this page.
    - Clone the forked repository to your local machine.
@@ -14,7 +26,7 @@
    cd cr8recipe
    ```
 
-2. Install dependencies:
+2. **Install dependencies:**
 
    ```bash
    yarn
@@ -22,7 +34,7 @@
    yarn install
    ```
 
-3. Create a branch:
+3. **Create a branch:**
 
    - Create a new branch for your contribution:
 
@@ -32,11 +44,11 @@
    git checkout -b fix/bug-name
    ```
 
-4. Make changes:
+4. **Make changes:**
 
    - Work on your contribution. Ensure your changes follow the project's codding style and convention.
 
-5. Test your changes:
+5. **Test your changes:**
 
    - Run the development server:
 
@@ -46,7 +58,7 @@
 
    - open localhost:3000 and verify that your changes work as expected.
 
-6. Commit your changes:
+6. **Commit your changes:**
 
    - Commit your changes with a descriptive commit message:
 
@@ -55,7 +67,7 @@
    git commit -m "Add new feture or fix issue"
    ```
 
-7. Push Changes:
+7. **Push Changes:**
 
    - Push your changes to your forked repository:
 
@@ -63,10 +75,14 @@
    git push origin feture/new-feture
    ```
 
-8. Create a Pull Request (PR):
+8. **Create a Pull Request (PR):**
    - Go to the original repository and click on "Compare & pull request."
    - Provide a clear title and description for your PR.
    - Submit the PR for review.
+
+## Setting Up the Backend
+
+Cr8Recipe relies on the backend API available at [Cr8Recipe-API](https://github.com/Koushik1311/Cr8Recipe-API.git). Follow the README.md file to set up the backend.
 
 ## Code Style
 

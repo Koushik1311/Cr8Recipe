@@ -54,11 +54,15 @@
    git checkout -b fix/bug-name
    ```
 
-4. **Make changes:**
+4. **Set up .env**
+
+   - copy .env.example to .env.local
+
+5. **Make changes:**
 
    - Work on your contribution. Ensure your changes follow the project's codding style and convention.
 
-5. **Test your changes:**
+6. **Test your changes:**
 
    - Run the development server:
 
@@ -68,7 +72,7 @@
 
    - open localhost:3000 and verify that your changes work as expected.
 
-6. **Commit your changes:**
+7. **Commit your changes:**
 
    - Commit your changes with a descriptive commit message:
 
@@ -77,7 +81,7 @@
    git commit -m "Add new feture or fix issue"
    ```
 
-7. **Push Changes:**
+8. **Push Changes:**
 
    - Push your changes to your forked repository:
 
@@ -85,7 +89,7 @@
    git push origin feture/new-feture
    ```
 
-8. **Create a Pull Request (PR):**
+9. **Create a Pull Request (PR):**
    - Go to the original repository and click on "Compare & pull request."
    - Provide a clear title and description for your PR.
    - Submit the PR for review.

@@ -49,12 +49,12 @@
    - Create a new branch for your contribution:
 
    ```bash
-   git checkout -b feature/new-feture
+   git checkout -b feature/new-feature
    # or
    git checkout -b fix/bug-name
    ```
 
-4. **Set up .env**
+4. **Set up .env:**
 
    - copy .env.example to .env.local
 

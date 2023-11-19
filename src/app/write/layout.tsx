@@ -1,3 +1,4 @@
+import LeftBar from "@/components/write/LeftBar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,12 +12,8 @@ export default function WriteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex">
-      <div className="flex flex-col justify-center items-start h-[100vh]">
-        <button>Recipe</button>
-        <button>Ingredient</button>
-        <button>Step</button>
-      </div>
+    <main className="flex justify-center">
+      <LeftBar />
       {children}
     </main>
   );

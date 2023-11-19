@@ -1,9 +1,9 @@
-import IngredientForm from "@/components/write/ingredient/IngredientForm";
+import Ingredient from "@/components/write/ingredient/Ingredient";
 
-export default function Ingredient() {
+export default function page() {
   return (
     <>
-      <IngredientForm />
+      <Ingredient />
     </>
   );
 }

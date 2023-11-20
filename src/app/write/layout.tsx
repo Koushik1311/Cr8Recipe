@@ -12,7 +12,7 @@ export default function WriteLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex justify-center">
+    <main className="grid grid-cols-3 justify-center">
       <LeftBar />
       {children}
     </main>

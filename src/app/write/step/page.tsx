@@ -1,4 +1,4 @@
-import Step from "@/components/write/step/Step";
+import Step from "@/components/Create/step/Step";
 
 export default function page() {
   return (

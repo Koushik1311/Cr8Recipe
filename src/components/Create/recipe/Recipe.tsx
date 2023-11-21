@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import AddCategory from "./AddCategory";
 import Cookies from "js-cookie";

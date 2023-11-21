@@ -1,4 +1,4 @@
-import LeftBar from "@/components/Write/LeftBar";
+import LeftBar from "@/components/Create/LeftBar";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import { Metadata } from "next";
 

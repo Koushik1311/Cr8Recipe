@@ -1,4 +1,4 @@
-import Ingredient from "@/components/write/ingredient/Ingredient";
+import Ingredient from "@/components/Write/ingredient/Ingredient";
 
 export default function page() {
   return (

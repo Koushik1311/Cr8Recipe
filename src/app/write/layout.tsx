@@ -1,4 +1,5 @@
-import LeftBar from "@/components/write/LeftBar";
+import LeftBar from "@/components/Write/LeftBar";
+import { EdgeStoreProvider } from "@/lib/edgestore";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function WriteLayout({
   return (
     <main className="grid grid-cols-3 justify-center">
       <LeftBar />
-      {children}
+      <EdgeStoreProvider>{children}</EdgeStoreProvider>
     </main>
   );
 }

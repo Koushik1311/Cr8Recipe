@@ -38,6 +38,7 @@ export const createRecipe = async (
         userId: recipe.userId,
         categoryId: recipe.categoryId,
         description: recipe.description,
+        imageUrl: recipe.imageUrl,
       },
     },
   };

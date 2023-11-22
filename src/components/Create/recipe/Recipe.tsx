@@ -8,6 +8,7 @@ import { createRecipe } from "@/api-calls/write/recipe.api-call";
 import { decryptToken } from "@/utils/TokenEncription";
 import { RecipeType } from "@/types/write/recipe.type";
 import { useRouter } from "next/navigation";
+import { useEdgeStore } from "@/lib/edgestore";
 
 // Recipe component
 export default function Recipe() {
@@ -20,7 +21,12 @@ export default function Recipe() {
     slag: "",
     cookingTime: "",
     description: "",
+    imageUrl: "",
   });
+
+  // State to hold image file
+  const [file, setFile] = useState<File>();
+  const { edgestore } = useEdgeStore();
 
   // Fetch the user ID once when the component mounts
   useEffect(() => {
@@ -74,6 +80,21 @@ export default function Recipe() {
     setRecipe((prevRecipe) => ({ ...prevRecipe, categoryId }));
   };
 
+  // Handle imageUrl
+  const handleImageUrl = (imageUrl: string) => {
+    setRecipe((prevRecipe) => ({ ...prevRecipe, imageUrl }));
+  };
+
+  // Handle image upload
+  const handleImageUpload = async () => {
+    if (file) {
+      const res = await edgestore.myPublicImages.upload({
+        file,
+      });
+      handleImageUrl(res.url);
+    }
+  };
+
   // Handle form submission
   const handleSubmit = async () => {
     try {
@@ -101,6 +122,14 @@ export default function Recipe() {
       </div>
       {/* Slag Input (Read-only, Hidden) */}
       <input type="hidden" name="slag" id="slag" value={recipe.slag} readOnly />
+      {/* ImageUrl Input (Read-only, Hidden) */}
+      <input
+        type="hidden"
+        name="imageUrl"
+        id="imageUrl"
+        value={recipe.imageUrl}
+        readOnly
+      />
       {/* Cooking Time Input */}
       <div className="flex flex-col">
         <span>Cooking Time</span>
@@ -153,6 +182,16 @@ export default function Recipe() {
           </span>
           <FaArrowRight className="group-hover:translate-x-1 transition-all" />
         </button>
+      </div>
+
+      <div>
+        <input
+          type="file"
+          onChange={(e) => {
+            setFile(e.target.files?.[0]);
+          }}
+        />
+        <button onClick={handleImageUpload}>Upload</button>
       </div>
     </section>
   );

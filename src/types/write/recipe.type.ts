@@ -5,4 +5,5 @@ export type RecipeType = {
   slag: string;
   cookingTime: string;
   description: string;
+  imageUrl: string;
 };

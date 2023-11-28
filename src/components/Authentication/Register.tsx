@@ -13,6 +13,8 @@ export default function Register() {
     confirm_password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const isPasswordValid = (password: string) => {
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -20,15 +22,20 @@ export default function Register() {
   };
 
   const handleRegister = async () => {
-    if (user.password !== user.confirm_password) {
-      console.log("Passwords do not match");
-      return;
+    try {
+      setLoading(true);
+      if (user.password !== user.confirm_password) {
+        console.log("Passwords do not match");
+        return;
+      }
+      if (!isPasswordValid(user.password)) {
+        console.log("Password does not meet the criteria");
+        return;
+      }
+      await onRegister(user, router);
+    } finally {
+      setLoading(false);
     }
-    if (!isPasswordValid(user.password)) {
-      console.log("Password does not meet the criteria");
-      return;
-    }
-    await onRegister(user, router);
   };
 
   return (
@@ -47,7 +54,13 @@ export default function Register() {
         <p className="text-sm text-gray-500">
           Enter your email bellow to create your account
         </p>
-        <form className="flex flex-col justify-center items-center gap-[0.5rem] w-full mt-[0.9rem]">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleRegister();
+          }}
+          className="flex flex-col justify-center items-center gap-[0.5rem] w-full mt-[0.9rem]"
+        >
           <input
             className="border-[0.1rem] py-[0.5rem] px-[0.9rem] rounded-md w-[90%] sm:w-full"
             type="email"
@@ -79,10 +92,17 @@ export default function Register() {
           />
           <button
             className="bg-gray-950 text-white py-[0.6rem] border-none rounded-md text-sm font-semibold w-[90%] sm:w-full"
-            type="button"
-            onClick={handleRegister}
+            type="submit"
+            disabled={loading}
           >
-            Sign Up with Email
+            {loading ? (
+              <div className="flex justify-center items-center gap-[0.8rem]">
+                <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+                <>Signing Up...</>
+              </div>
+            ) : (
+              <>Sign Up with Email</>
+            )}
           </button>
         </form>
 

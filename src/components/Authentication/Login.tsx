@@ -1,7 +1,7 @@
 "use client";
 
 // external import
-import { FaAngleLeft } from "react-icons/fa6";
+import { FaAngleLeft, FaPaperPlane } from "react-icons/fa6";
 
 // local import
 import BackBtn from "../Shared/BackBtn";
@@ -18,8 +18,15 @@ export default function Login() {
     password: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleLogin = async () => {
-    await onLogin(user, router);
+    try {
+      setLoading(true);
+      await onLogin(user, router);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -38,7 +45,13 @@ export default function Login() {
         <p className="text-sm px-[0.9rem] sm:px-0 text-gray-500 text-center">
           Enter your email and password to sign in to your account
         </p>
-        <form className="flex flex-col justify-center items-center gap-[0.5rem] w-full mt-[0.9rem]">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleLogin();
+          }}
+          className="flex flex-col justify-center items-center gap-[0.5rem] w-full mt-[0.9rem]"
+        >
           <input
             className="border-[0.1rem] py-[0.5rem] px-[0.9rem] rounded-md w-[90%] sm:w-full"
             type="email"
@@ -59,10 +72,17 @@ export default function Login() {
           />
           <button
             className="bg-gray-950 text-white py-[0.6rem] border-none rounded-md text-sm font-semibold w-[90%] sm:w-full"
-            type="button"
-            onClick={handleLogin}
+            type="submit"
+            disabled={loading} // Disable the button when loading
           >
-            Sign In with Email
+            {loading ? (
+              <div className="flex justify-center items-center gap-[0.8rem]">
+                <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+                <>Signing In...</>
+              </div>
+            ) : (
+              <>Sign In with Email</>
+            )}
           </button>
         </form>
 

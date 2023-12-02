@@ -9,7 +9,27 @@ export const getAllRecipe = async () => {
 
   const graphqlQuery = {
     query: `
-        query 
+    query {
+      recipes {
+        id
+        createdAt
+        updatedAt
+        name
+        slag
+    
+        description
+        cookingTime
+        imageUrl
+    
+        recipeingredients {
+          ingredients {
+            name
+          }
+          quantity
+          unit
+        }
+      }
+    }
         `,
   };
 

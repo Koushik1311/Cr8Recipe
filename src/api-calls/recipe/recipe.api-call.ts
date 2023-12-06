@@ -16,11 +16,9 @@ export const getAllRecipe = async () => {
         updatedAt
         name
         slag
-    
         description
         cookingTime
         imageUrl
-    
         recipeingredients {
           ingredients {
             name

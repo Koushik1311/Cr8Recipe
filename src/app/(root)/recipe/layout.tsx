@@ -1,5 +1,3 @@
-import RightMenuBar from "@/components/Recipe/RightMenuBar";
-
 export default function RightLayout({
   children,
 }: {
@@ -8,9 +6,6 @@ export default function RightLayout({
   return (
     <div className="flex">
       <>{children}</>
-      <>
-        <RightMenuBar />
-      </>
     </div>
   );
 }

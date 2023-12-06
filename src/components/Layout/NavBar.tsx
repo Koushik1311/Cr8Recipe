@@ -32,7 +32,7 @@ export default function NavBar() {
   return (
     <section className="mt-[1rem] flex items-center justify-between">
       {/* Logo */}
-      <h1>SaR</h1>
+      <h1>Cr8Recipe</h1>
       {/* Navlinks */}
       <ul className="flex gap-[2rem]">
         {navLinks.map((link, index) => (

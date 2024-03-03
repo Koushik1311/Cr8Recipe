@@ -1,9 +1,16 @@
+import Explore from "@/components/Home/Explore";
+import Hero from "@/components/Home/Hero";
+
 export default function Home() {
   return (
     <main>
-      <h1 className="text-slate-600 text-[3rem] flex justify-center items-center h-[100vh]">
-        Welcome
-      </h1>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Some ... */}
+
+      {/* Explore Recipes */}
+      <Explore />
     </main>
   );
 }

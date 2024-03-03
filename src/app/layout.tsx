@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-50 container mx-auto`}>
+      <body className={`${inter.className} bg-slate-50`}>
         <LoginContextProvider>{children}</LoginContextProvider>
         <Toaster
           position="top-center"

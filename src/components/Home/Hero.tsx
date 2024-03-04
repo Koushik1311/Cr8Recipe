@@ -8,7 +8,7 @@ export default function Hero() {
 
       {/* Heading */}
       <h1 className="text-center text-[10rem] text-[#83A180] mt-[1rem] font-bold">
-        Let's Share
+        Let&apos;s Share
       </h1>
 
       {/* Image */}

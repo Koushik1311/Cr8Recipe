@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import LoginContextProvider from "../contexts/LoginContextProvider";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Cr8Recipe",
-  description: "Next generation Recipe Sharing app",
-};
 
 export default function RootLayout({
   children,

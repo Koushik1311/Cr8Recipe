@@ -5,12 +5,14 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <Hero />
+      <section>
+        <Hero />
+      </section>
 
       {/* Some ... */}
 
       {/* Explore Recipes */}
-      <Explore />
+      {/* <Explore /> */}
     </main>
   );
 }

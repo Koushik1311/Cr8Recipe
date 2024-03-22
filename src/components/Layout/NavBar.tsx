@@ -31,7 +31,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <section className="mt-[1rem] mx-[7rem] flex items-center justify-between">
+    <div className="mt-[1rem] mx-[7rem] flex items-center justify-between">
       <div className="flex items-center justify-center space-x-6">
         {/* Logo */}
         <h1 className="text-orange-600 font-semibold text-[1.5rem]">
@@ -76,6 +76,6 @@ export default function NavBar() {
           <Btn goTo="/login">Log In</Btn>
         )}
       </>
-    </section>
+    </div>
   );
 }

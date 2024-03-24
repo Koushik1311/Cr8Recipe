@@ -9,10 +9,17 @@ export default function Home() {
         <Hero />
       </section>
 
-      {/* Some ... */}
+      {/* Featured Recipes */}
 
-      {/* Explore Recipes */}
-      {/* <Explore /> */}
+      {/* Benefits */}
+
+      {/* Testimonials */}
+
+      {/* Call to Action */}
+
+      {/* About Us */}
+
+      {/* Contact Information */}
     </main>
   );
 }

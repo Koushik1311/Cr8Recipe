@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col mt-24">
       <div className="flex flex-col space-y-5 items-center lg:space-y-0 lg:flex-row lg:justify-center lg:space-x-80 lg:items-center">
         {/* TODO: Logo */}
         <h1 className="text-orange-600 font-semibold text-[1.5rem]">
@@ -12,7 +12,7 @@ export default function Footer() {
         {/* About, links etc... */}
         <div className="text-sm text-gray-900 font-medium flex flex-wrap justify-center space-x-5 lg:space-x-14 mx-6">
           {/* TODO: Links */}
-          <Link href="/">Recipe</Link>
+          <Link href="/recipe">Recipe</Link>
           <Link href="/">Pricing</Link>
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>

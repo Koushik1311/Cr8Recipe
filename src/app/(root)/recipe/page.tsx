@@ -3,7 +3,9 @@ import RecipeList from "@/components/Recipe/RecipeList";
 export default function Recipe() {
   return (
     <main>
-      <RecipeList />
+      <section className="my-16">
+        <RecipeList />
+      </section>
     </main>
   );
 }

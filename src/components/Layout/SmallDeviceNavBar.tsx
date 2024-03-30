@@ -47,7 +47,7 @@ export default function SmallDeviceNavBar() {
       {/* Hidden */}
       <ul
         className={`absolute bg-white z-20 h-screen w-[70%] ${
-          isOpen ? "" : ""
+          isOpen ? "" : "hidden"
         }`}
       >
         {navLinks.map((link, index) => (

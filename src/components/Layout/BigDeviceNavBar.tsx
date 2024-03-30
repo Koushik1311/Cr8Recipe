@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Btn from "../Shared/Btn";
 import { navLinks } from "@/data/navbar/data";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import useLoginContext from "@/hooks/LoginContext";
 import { onLogout } from "@/api-calls/authentication/logout";
+import { HiMagnifyingGlass } from "react-icons/hi2";
 
 export default function BigDeviceNavBar() {
   const { isLoggedIn, setIsLoggedIn } = useLoginContext();
@@ -48,7 +49,10 @@ export default function BigDeviceNavBar() {
       </div>
 
       {/* Login/Register */}
-      <>
+      <div className="flex items-center space-x-7">
+        <Link href="/recipe">
+          <HiMagnifyingGlass className="text-xl cursor-pointer text-gray-500" />
+        </Link>
         {isLoggedIn ? ( // If the user is logged in
           <div>
             <Link className="mr-4" href="/write/recipe">
@@ -60,7 +64,7 @@ export default function BigDeviceNavBar() {
           // If the user is not logged in
           <Btn goTo="/login">Log In</Btn>
         )}
-      </>
+      </div>
     </div>
   );
 }

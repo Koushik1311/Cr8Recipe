@@ -51,7 +51,7 @@ export default function BigDeviceNavBar() {
       {/* Login/Register */}
       <div className="flex items-center space-x-7">
         <Link href="/recipe">
-          <HiMagnifyingGlass className="text-xl cursor-pointer text-gray-500" />
+          <HiMagnifyingGlass className="text-xl cursor-pointer text-gray-400 hover:text-orange-600 transition-colors delay-75 duration-150 ease-in-out" />
         </Link>
         {isLoggedIn ? ( // If the user is logged in
           <div>

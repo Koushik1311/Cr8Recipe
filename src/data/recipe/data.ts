@@ -1,14 +1,44 @@
-export const rightMenuItems = [
+export const recipeData = [
   {
-    title: "Browse",
-    link: "/recipe",
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4,
   },
   {
-    title: "My Feed",
-    link: "/recipe/myfeed",
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4,
   },
   {
-    title: "Pro Recipes",
-    link: "/recipe/prorecipies",
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4.6,
+  },
+  {
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4.1,
+  },
+  {
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4,
+  },
+  {
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4,
+  },
+  {
+    image: "/victoria.jpg",
+    title: "The Recipe Name",
+    author: "J.K Ray",
+    ratting: 4,
   },
 ] as const;

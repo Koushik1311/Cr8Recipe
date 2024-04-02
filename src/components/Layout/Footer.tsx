@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="text-sm text-gray-900 font-medium flex flex-wrap justify-center space-x-5 lg:space-x-14 mx-6">
           {/* TODO: Links */}
           <Link href="/recipe">Recipe</Link>
-          <Link href="/">Pricing</Link>
+          {/* <Link href="/">Pricing</Link> */}
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
         </div>

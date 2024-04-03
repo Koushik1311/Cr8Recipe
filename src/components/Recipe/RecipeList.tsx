@@ -2,6 +2,7 @@ import { recipeData } from "@/data/recipe/data";
 import Image from "next/image";
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
 import { GiChefToque } from "react-icons/gi";
+import Link from "next/link";
 
 export default function RecipeList() {
   return (
@@ -21,7 +22,7 @@ export default function RecipeList() {
             <div className="flex flex-row mt-4">
               <div className="grow">
                 <h3 className="text-base font-normal text-gray-700">
-                  {recipe.title}
+                  <Link href={`/recipe/${recipe.slag}`}>{recipe.title}</Link>
                 </h3>
                 <p className="text-base font-light text-gray-500">
                   {recipe.author}

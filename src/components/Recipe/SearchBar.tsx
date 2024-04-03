@@ -8,7 +8,7 @@ export default function SearchBar() {
       <input
         type="text"
         placeholder="Search"
-        className="w-screen lg:w-[37rem] border rounded-full py-4 pl-12 pr-3 outline-none focus:ring-1 focus:ring-orange-500 text-sm"
+        className="w-[90vw] lg:w-[37rem] border rounded-full py-4 pl-12 pr-3 outline-none focus:ring-1 focus:ring-orange-500 text-sm"
       />
     </div>
   );

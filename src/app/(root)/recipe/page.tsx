@@ -13,7 +13,7 @@ export default function Recipe() {
       <section className="flex justify-center mx-auto mt-16">
         <SearchBar />
       </section>
-      <section>
+      <section className="mx-3 lg:ml-0">
         {/* Category, Filter Bar */}
         <div className="flex flex-row justify-between">
           <>
@@ -29,7 +29,7 @@ export default function Recipe() {
         </div>
       </section>
 
-      <section className="mt-16">
+      <section className="mt-16 mx-3 lg:mx-0">
         <RecipeList />
       </section>
     </main>

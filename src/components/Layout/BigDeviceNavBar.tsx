@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 import useLoginContext from "@/hooks/LoginContext";
 import { onLogout } from "@/api-calls/authentication/logout";
 import { HiMagnifyingGlass } from "react-icons/hi2";
+import UserMenu from "./UserMenu";
 
 export default function BigDeviceNavBar() {
   const { isLoggedIn, setIsLoggedIn } = useLoginContext();
@@ -54,12 +55,9 @@ export default function BigDeviceNavBar() {
           <HiMagnifyingGlass className="text-xl cursor-pointer text-gray-400 hover:text-orange-600 transition-colors delay-75 duration-150 ease-in-out" />
         </Link>
         {isLoggedIn ? ( // If the user is logged in
-          <div>
-            <Link className="mr-4" href="/write/recipe">
-              Write
-            </Link>
-            <button onClick={handleLogout}>Log Out</button>
-          </div>
+          <>
+            <UserMenu handleLogout={handleLogout} />
+          </>
         ) : (
           // If the user is not logged in
           <Btn goTo="/login">Log In</Btn>
